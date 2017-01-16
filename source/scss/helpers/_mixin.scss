@@ -1,0 +1,7 @@
+@mixin tema($bg-color, $color, $style-border) {
+	background-color: $bg-color;
+	border: $style-border;
+	ul li a {
+		color: $color;
+	}
+}

@@ -1,0 +1,27 @@
+.navbar-link {
+	ul {
+		text-align: right;
+		width: 500px;
+	}	
+
+	ul li {
+		display: inline-block;
+		margin-left: 25px;
+		margin-top: 20px;
+	}
+
+	ul li a {
+		color: #000;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: .1em;
+		font-size: 14px;
+		line-height: 20px;
+		padding: 10px 0;
+		font-family: courier;
+	}
+
+	ul li a:hover {
+		color: #CCC;
+	}
+}

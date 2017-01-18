@@ -1,14 +1,15 @@
+@import '../helpers/variables.scss';
 @import 'brand.scss';
 @import 'link.scss';
 
 .navbar-blue {
-	@include tema(#3B5998, #FFF, 1px solid #000);
+	@include tema($navbar-blue-bg, $navbar-blue-color, $navbar-blue-border);
 }
 
 .navbar-red {
-	@include tema(#B9090B, #FFF, 1px solid #000);
+	@include tema($navbar-red-bg, $navbar-red-color, $navbar-red-border);
 }
 
 .navbar-green {
-	@include tema(#00FF00, #FFF, 1px solid #000);	
+	@include tema($navbar-green-bg, $navbar-green-color, $navbar-green-border);	
 }

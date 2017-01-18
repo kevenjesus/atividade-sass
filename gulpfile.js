@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var notify = require('gulp-notify');
+var htmlmin = require("gulp-htmlmin");
 
 gulp.task('sass', function() {
 	return gulp.src('./source/scss/style.scss')
@@ -9,9 +10,16 @@ gulp.task('sass', function() {
 			.pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('background', function() {
-	gulp.watch('./source/scss/**/*.scss', ['sass']);
+gulp.task('html', function() {
+    gulp.src('./source/*.html')
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('./dist'))
 });
 
-gulp.task('default', ['sass', 'background']);
+gulp.task('background', function() {
+	gulp.watch('./source/scss/**/*.scss', ['sass']);
+	gulp.watch('./source/*.html', ['html']);
+});
+
+gulp.task('default', ['sass', 'html', 'background']);
 
